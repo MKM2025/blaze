@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
 
 :root {
   --white: #fff;
@@ -34,17 +34,13 @@ html {
     font-size: 55%;
   }
 
-  @media screen and (max-width: 450 px) {
+  @media screen and (max-width: 450px) {
     font-size: 50%;
   }
 }
 
 section {
   padding: 2rem;
-
-  &:nth-child(even) {
-    background-color: var(--grey);
-  }
 
   @media screen and (max-width: 991px) {
     padding: 2rem;
@@ -70,8 +66,8 @@ section {
 
 .heading {
   text-align: center;
-  color: var(--black);
-  font-size: 3rem;
+  color: #FFA500;
+  font-size: 3.5rem;
   padding-bottom: 2rem;
   text-transform: uppercase;
   transition: var(--transition);
@@ -79,8 +75,8 @@ section {
 
 .sub-heading {
   text-align: center;
-  color: var(--green);
-  font-size: 2rem;
+  color: #FFA500;
+  font-size: 2.5rem;
   padding-top: 1rem;
   transition: var(--transition);
 }
@@ -88,8 +84,82 @@ section {
 .swiper {
   width: 100%;
   max-width: 1200px;
+  position: relative;
+}
+
+.swiper-pagination {
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .swiper-pagination-bullet-active {
   background: var(--green);
+}
+
+// Swiper Navigation Styles
+.swiper-button-prev,
+.swiper-button-next {
+  width: 4rem;
+  height: 4rem;
+  background: var(--white);
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  color: var(--black);
+  transition: var(--transition);
+  bottom: 0rem;
+  top: auto;
+  border: 0.1rem solid #E55B3C;
+
+  &:hover {
+    background: var(--green);
+    color: var(--white);
+  }
+
+  &::after {
+    font-size: 1.6rem;
+    color: #1A5319;
+    font-weight: 900;
+  }
+}
+
+.swiper-button-prev {
+  left: calc(50% - 15rem);
+}
+
+.swiper-button-next {
+  right: calc(50% - 15rem);
+}
+
+.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 4rem;
+    height: 4rem;
+
+    &::after {
+      font-size: 1.6rem;
+      color: #1A5319;
+      font-weight: 900;
+    }
+  }
+
+  .swiper-button-prev {
+    left: 1rem;
+  }
+
+  .swiper-button-next {
+    right: 1rem;
+  }
 }

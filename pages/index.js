@@ -10,12 +10,14 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>React responsive restaurant landing page</title>
+        <title>Blaze Addis Cafe, Restaurant & Bakery</title>
         <meta
           name='description'
-          content='React responsive restaurant landing page'
+          content='Blaze Addis Cafe, Restaurant & Bakery'
         />
-        <link rel='icon' href='/favicon.ico' />
+        <link rel="shortcut icon" href="/images/favicon-512x512.png" />
+        <link rel="icon" href="/images/favicon-512x512.png" />
+        <link rel="apple-touch-icon" href="/images/favicon-192x192.png" />
       </Head>
       <Header />
       <Main />

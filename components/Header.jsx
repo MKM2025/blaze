@@ -50,8 +50,10 @@ function Header() {
   return (
     <header className={styles.header}>
       <a href='#' className={styles.header__logo}>
-        <span className='fas fa-utensils' />
-        resto.
+        <img 
+          src="/images/logo.png" 
+          alt="Restaurant Logo" 
+        />
       </a>
       <nav
         id='nav'

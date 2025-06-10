@@ -7,19 +7,7 @@ function Footer() {
         <div className={styles.footer__column}>
           <h3 className={styles.title}>locations</h3>
           <a href='#' className={styles.footer__link}>
-            india
-          </a>
-          <a href='#' className={styles.footer__link}>
-            japan
-          </a>
-          <a href='#' className={styles.footer__link}>
-            russia
-          </a>
-          <a href='#' className={styles.footer__link}>
-            USA
-          </a>
-          <a href='#' className={styles.footer__link}>
-            france
+            24 Kebele, Near the New Adey Ababa Stadium Addis Ababa, Ethiopia
           </a>
         </div>
         <div className={styles.footer__column}>
@@ -45,47 +33,22 @@ function Footer() {
         </div>
         <div className={styles.footer__column}>
           <h3 className={styles.title}>contact info</h3>
-          <a href='#' className={styles.footer__link}>
-            +123-456-7890
+          <a href='tel:+251704404115' className={styles.footer__link}>
+            +251 - 704 - 404115
           </a>
-          <a href='#' className={styles.footer__link}>
-            +111-222-3333
-          </a>
-          <a href='#' className={styles.footer__link}>
-            shaikhanas@gmail.com
-          </a>
-          <a href='#' className={styles.footer__link}>
-            anasbhai@gmail.com
-          </a>
-          <a href='#' className={styles.footer__link}>
-            mumbai, india - 400104
+          <a href='tel:+251933232425' className={styles.footer__link}>
+            +251 - 933-232425
           </a>
         </div>
         <div className={styles.footer__column}>
           <h3 className={styles.title}>follow us</h3>
-          <a href='#' className={styles.footer__link}>
-            facebook
-          </a>
-          <a href='#' className={styles.footer__link}>
-            twitter
-          </a>
-          <a href='#' className={styles.footer__link}>
-            instagram
-          </a>
-          <a href='#' className={styles.footer__link}>
-            linkedin
+          <a href='https://www.tiktok.com/@blaze_addis' target='_blank' rel='noopener noreferrer' className={styles.footer__link}>
+            <span className={styles.tiktokIcon}><i className="fa-brands fa-tiktok"></i></span> Tiktok @blaze_addis
           </a>
         </div>
       </div>
       <div className={styles.footer__credit}>
-        Copyright @ 2021 by{' '}
-        <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://github.com/smarqueslopez'
-        >
-          smarqueslopez
-        </a>
+        Copyright @ 2023 By Blaze Addis
       </div>
     </footer>
   )

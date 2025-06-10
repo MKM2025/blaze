@@ -1,18 +1,18 @@
 const sliderItems = [
   {
     id: '1',
-    title: 'spicy noodles',
-    subtitle: 'our special dish',
-    description:
-      'Soy sauce salt miso butter roasted pork slices flavoured.',
-    img: 'images/home-img-1.png'
+    title: 'Our Catering Service For:',
+    subtitle: 'Perfect for Every Occasion',
+    description: '',
+    img: 'images/home-img-1.png',
+    isCatering: true
   },
   {
     id: '2',
-    title: 'fried chicken',
-    subtitle: 'our special dish',
+    title: 'Our Special Pastry Item',
+    subtitle: 'Torta Cake',
     description:
-      'Bacon ipsum dolor amet short ribs brisket venison drumstick.',
+      'Delicately layered, rich in flavor, and baked to perfection — our Torta Cake is the ideal indulgence for every celebration.',
     img: 'images/home-img-2.png'
   },
   {

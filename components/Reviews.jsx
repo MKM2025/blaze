@@ -3,8 +3,19 @@ import { Autoplay } from 'swiper'
 import Review from './Review'
 import reviewList from '@/utils/reviewList'
 import styles from '@/styles/components/Reviews.module.scss'
+import { useEffect, useState } from 'react'
 
 function Reviews() {
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) {
+    return null
+  }
+
   return (
     <section className={styles.reviews} id='reviews'>
       <h3 className='sub-heading'>customer&apos;s review</h3>

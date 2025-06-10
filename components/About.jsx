@@ -4,7 +4,7 @@ function About() {
   return (
     <section className={styles.about} id='about'>
       <h3 className='sub-heading'>about us</h3>
-      <h1 className='heading'>why choose us?</h1>
+      <h1 className='heading'>Why Choose Us?</h1>
 
       <div className={styles.about__row}>
         <div className={styles.about__image}>
@@ -12,36 +12,60 @@ function About() {
         </div>
 
         <div className={styles.about__content}>
-          <h3 className={styles.about__title}>best food in the country</h3>
+          <h3 className={styles.about__title}>Exceptional Food, Unbeatable Value in Addis</h3>
           <p className={styles.about__description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu purus
-            tellus. Aenean vulputate sodales nulla eu maximus. In imperdiet, est
-            at tristique condimentum, ante ex interdum ligula, non tempor enim
-            erat ut ex.
+            Blaze Addis is conveniently located at 24 Kebele, Megenagna—just minutes from the new Addis Ababa Stadium. We specialize in:
           </p>
-          <p className={styles.about__description}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu purus
-            tellus. Aenean vulputate sodales nulla eu maximus. In imperdiet, est
-            at tristique condimentum, ante ex interdum ligula, non tempor enim
-            erat ut ex.
-          </p>
+          <ul className={styles['about__list']}>
+            <li>Fast food & traditional Ethiopian cuisine</li>
+            <li>Fresh in-house bakery & pastries</li>
+            <li>Premium catering services with gourmet ingredients</li>
+          </ul>
+
+          <h3 className={styles.about__title}>Experience Our Space</h3>
+          <ul className={styles['about__list']}>
+            <li>Spacious versatile layout accommodating 60+ guests for special events</li>
+            <li>Vibrant lounge atmosphere with cool ambiance and curated music</li>
+            <li>Perfect for all occasions: intimate dinners to large celebrations</li>
+          </ul>
+
+          <h3 className={styles.about__title}>Our Quality Commitment</h3>
+          <ul className={styles['about__list']}>
+            <li><i className="fas fa-check-circle"></i> Healthy oils in all dishes</li>
+            <li><i className="fas fa-check-circle"></i> 100% teff injera baked daily on-site</li>
+            <li><i className="fas fa-check-circle"></i> Artisan bakery prepared fresh daily</li>
+            <li><i className="fas fa-check-circle"></i> Expert chefs crafting memorable flavors</li>
+          </ul>
+
+          <h3 className={styles.about__title}>Convenience Redefined</h3>
+          <ul className={styles['about__list']}>
+            <li>Effortless takeaway with quick pickup</li>
+            <li>Central location with easy access</li>
+            <li>Professional event hosting services</li>
+          </ul>
+
           <div className={styles.about__container}>
             <div className={styles.about__icon}>
-              <i className='fas fa fa-shipping-fast'></i>
-              <span>free delivery</span>
+              <i className='fas fa-dollar-sign'></i>
+              <span>Good Price</span>
             </div>
             <div className={styles.about__icon}>
-              <i className='fas fa fa-dollar-sign'></i>
-              <span>easy payments</span>
+              <i className='fas fa-leaf'></i>
+              <span>Healthy Foods</span>
             </div>
             <div className={styles.about__icon}>
-              <i className='fas fa fa-headset'></i>
-              <span>24/7 service</span>
+              <i className='fas fa-map-marker-alt'></i>
+              <span>Good Location</span>
+            </div>
+            <div className={styles.about__icon}>
+              <i className='fas fa-ruler-combined'></i>
+              <span>Spacious Space</span>
+            </div>
+            <div className={styles.about__icon}>
+              <i className='fas fa-music'></i>
+              <span>Nice Music</span>
             </div>
           </div>
-          <a href='#' className='button'>
-            learn more
-          </a>
         </div>
       </div>
     </section>

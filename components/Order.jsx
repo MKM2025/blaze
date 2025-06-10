@@ -1,96 +1,50 @@
 import classNames from 'classnames'
 import styles from '@/styles/components/Order.module.scss'
+import { useRef, useEffect, useState } from 'react'
 
 function Order() {
+  const sectionRef = useRef(null)
+  const [inView, setInView] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setInView(entry.isIntersecting)
+      },
+      {
+        threshold: 0.1
+      }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [])
+
   return (
-    <section className={styles.order} id='order'>
+    <section
+      className={classNames(styles.order, { [styles['in-view']]: inView })}
+      id='order'
+      ref={sectionRef}
+    >
       <h3 className='sub-heading'>order now</h3>
-      <h1 className='heading'>free and fast</h1>
-      <form action='#' className={styles.form}>
-        <div className={styles.order__container}>
-          <div className={styles.form__item}>
-            <span className={styles.label}>your name</span>
-            <input
-              className={styles.input}
-              type='text'
-              placeholder='enter your name'
-            ></input>
-          </div>
-          <div className={styles.form__item}>
-            <span className={styles.label}>your number</span>
-            <input
-              className={styles.input}
-              type='text'
-              placeholder='enter your number'
-            ></input>
-          </div>
+      <h1 className='heading'>Call Us Now!</h1>
+      <div className={styles.contactInfo}>
+        <div className={styles.contactItem}>
+          <i className="fas fa-phone"></i>
+          <span>+251 - 704 - 404115</span>
         </div>
-        <div className={styles.order__container}>
-          <div className={styles.form__item}>
-            <span className={styles.label}>your order</span>
-            <input
-              className={styles.input}
-              type='text'
-              placeholder='enter food name'
-            ></input>
-          </div>
-          <div className={styles.form__item}>
-            <span className={styles.label}>additional food</span>
-            <input
-              className={styles.input}
-              type='text'
-              placeholder='extra with food'
-            ></input>
-          </div>
+        <div className={styles.contactItem}>
+          <i className="fas fa-phone"></i>
+          <span>+251 - 933-232425</span>
         </div>
-        <div className={styles.order__container}>
-          <div className={styles.form__item}>
-            <span className={styles.label}>how much</span>
-            <input
-              className={styles.input}
-              type='number'
-              placeholder='how many orders'
-            ></input>
-          </div>
-          <div className={styles.form__item}>
-            <span className={styles.label}>date and time</span>
-            <input
-              className={styles.input}
-              type='datetime-local'
-              placeholder='date and time'
-            ></input>
-          </div>
-        </div>
-        <div className={styles.order__container}>
-          <div className={styles.form__item}>
-            <span className={styles.label}>your address</span>
-            <textarea
-              className={styles.input}
-              id=''
-              name=''
-              cols='30'
-              rows='10'
-              placeholder='enter your address'
-            ></textarea>
-          </div>
-          <div className={styles.form__item}>
-            <span className={styles.label}>your message</span>
-            <textarea
-              className={styles.input}
-              id=''
-              name=''
-              cols='30'
-              rows='10'
-              placeholder='enter your message'
-            ></textarea>
-          </div>
-        </div>
-        <input
-          type='submit'
-          value='order now'
-          className={classNames('button', styles.button)}
-        />
-      </form>
+      </div>
     </section>
   )
 }

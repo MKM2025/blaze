@@ -23,9 +23,9 @@ function Dish({ title, img, rating, price, description, favorited, detailed }) {
         <p className={styles.dish__description}>{description}</p>
       ) : null}
       <Stars value={rating} />
-      <span className={styles.dish__price}>{`$${price}`}</span>
-      <a href='#' className='button'>
-        add to cart
+      <span className={styles.dish__price}>{`Birr${price}`}</span>
+      <a href='#order' className='button'>
+        order
       </a>
     </div>
   )

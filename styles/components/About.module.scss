@@ -3,31 +3,27 @@
     
   &__row {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
     align-items: center;
-    transition: var(--trasition);
+    flex-wrap: wrap;
+    gap: 3rem;
   }
 
   &__image {
     flex: 1 1 45rem;
-    transition: var(--trasition);
+
     img {
       width: 100%;
-      transition: var(--trasition);
     }
   }
 
   &__content {
     flex: 1 1 45rem;
-    transition: var(--trasition);
   }
 
   &__title {
     color: var(--black);
-    font-size: 4rem;
+    font-size: 3rem;
     padding: 0.5rem 0;
-    transition: var(--trasition);
   }
 
   &__description {
@@ -35,36 +31,73 @@
     font-size: 1.5rem;
     padding: 0.5rem 0;
     line-height: 2;
-    transition: var(--trasition);
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+
+    li {
+      color: var(--light-color);
+      font-size: 1.8rem;
+      padding: 0.5rem 0;
+      position: relative;
+      padding-left: 2.5rem;
+
+      &::before {
+        content: "•";
+        color: var(--green);
+        font-size: 2rem;
+        position: absolute;
+        left: 0;
+        top: 0.5rem;
+      }
+    }
+
+    li:has(> i.fa-check-circle) {
+      &::before {
+        display: none;
+      }
+
+      i.fa-check-circle {
+        color: var(--green);
+        margin-right: 0.5rem;
+      }
+    }
   }
 
   &__container {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
     padding: 1rem 0;
-    margin-top: 0.5rem;
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__icon {
     background: var(--grey);
     border-radius: 0.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex: 1 1 17rem;
-    padding: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    flex: 0 1 15rem;
 
     i {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: var(--green);
     }
 
     span {
-      font-size: 1.5rem;
-      color: var(--black);
+      font-size: 1.7rem;
+      color: var(--light-color);
+      display: block;
+      padding-top: 0.5rem;
     }
   }
 }
