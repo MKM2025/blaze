@@ -99,7 +99,7 @@ section {
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--green);
+  background: #FFA500;
 }
 
 // Swiper Navigation Styles
@@ -107,23 +107,23 @@ section {
 .swiper-button-next {
   width: 4rem;
   height: 4rem;
-  background: var(--white);
+  background: #4A603E;
   border-radius: 50%;
   box-shadow: var(--box-shadow);
-  color: var(--black);
+  color: #FFA500;
   transition: var(--transition);
   bottom: 0rem;
   top: auto;
-  border: 0.1rem solid #E55B3C;
+  border: 0.1rem solid #FFA500;
 
   &:hover {
-    background: var(--green);
-    color: var(--white);
+    background: #FFA500;
+    color: #1A5319;
   }
 
   &::after {
     font-size: 1.6rem;
-    color: #1A5319;
+    color: #FFA500;
     font-weight: 900;
   }
 }
